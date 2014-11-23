@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Holler</title>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<script type="text/javascript">
+var imageCount = 1;
+var total = 2;
+
+function photo(x) {
+	var image = document.getElementById('image');
+	imageCount = imageCount + x;
+	if(imageCount > total){imageCount = 1;}
+	if(imageCount < 1){imageCount = total;}	
+	image.src = "Images/img"+ imageCount +".jpg";
+	}
+	
+window.setInterval(function photoA() {
+	var image = document.getElementById('image');
+	imageCount = imageCount + 1;
+	if(imageCount > total){imageCount = 1;}
+	if(imageCount < 1){imageCount = total;}	
+	image.src = "Images/img"+ imageCount +".jpg";
+	},5000);
+	
+function slidelink(){
+ if (imageCount == 1)
+  window.location = "indexCopy.html"
+ else if (imageCount == 2)
+  window.location = "test.html"
+}
+	
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+<div id="header">
+<div class="wrapper">
+<div class="logo">
+<h1><a name="topNav" href="#">LOGO</a></h1>
+</div>
+<h3>
+<ul><li><a name="" href="#">Party</a></li>
+  <li><a href="#">Sports</a></li>
+  <li><a href="#">Casual</a></li>
+  <li><a href="#">Formal</a></li>
+  <li><a href="#">Store</a></li>
+</ul></h3>
+</div>
+</div>
+</div>
+<br /><br  /><br /><br />
+<div id="content">
+<div id="slider">
+<a href="javascript:slidelink()"><img src="Images/img1.jpg" id="image" ></a>
+<div class="left_hold"><img onClick="photo(-1)" class="left" src="Images/left(Trans).png"></div>
+<div class="right_hold"><img onClick="photo(1)" class="right" src="Images/right(Trans).png"></div>
+</div>
+</div>
+
+<div id="content2">
+<img src="package1(sample2).jpg" hspace="10" width="411" height="350" alt="sample" />
+<img src="package1(sample2).jpg" width="411" height="350" alt="sample"/>
+<img src="package1(sample2).jpg" hspace="10" width="411" height="350" alt="sample" />
+</div>
+
+<footer>
+<br />
+Shop the <a href="#">fashion Invent Blocks</a> online store.
+<br>
+Copyright © 2014 Apple Inc. All rights reserved.</br>
+<br />
+</footer>
+</body>
+</html>
