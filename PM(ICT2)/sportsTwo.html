@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fashion Invent Blocks</title>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/sports2_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
+</head>
+
+<body>
+<div id="overallWrap">
+<div class="wrapper">
+<!-- Start of header -->
+<div id="header">
+<div class="wrapper">
+<div class="logo">
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
+<center>
+<h3>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
+  <li><a href="casual.html">Casual</a></li>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
+</div>
+</div>
+</div>
+<!-- End of Header -->
+<br /><br  /><br /><br />
+<!--Casual one content to give buffer for footer -->
+<div id="itemContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
+<div class="itemWrapper">
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a onClick="toggleOverlay()"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br />  
+
+<div class="casualFont3">Swim Wear <br />
+  <br /></div>
+<div class="casualFont">Customise your style:<br /></div><p>
+
+<div class="casualFont2">Swim Suit</div><br />
+<img src="style/sports2/suit.png" align="left" width="260" height="310" alt="suit">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="swimSuitChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> Funfit
+Racing Horses Swimsuit<br />
+    <input onClick="swimSuitChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> 
+   Bella Kini
+Ribbon Tankini Shorts Set <br />
+    <input onClick="swimSuitChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Aztec Surf Bikini Set<br />
+    <input onClick="swimSuitChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Bella Kini
+Full Piece Rouch Swimsuit <br />
+    <input onClick="swimSuitChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Bella Kini Bandeau Bikini Set <br />
+    
+    <p id="swimSuitContent">
+        This summer, be inspired by Kristen Dunst.
+        <br />Swim Suit comes with Stretchable nylon blend, padded cups, halter neckline and self tie fastening.
+        <br/><br/>Price: SGD$89.90
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartSwim()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bottom-->
+<div class="casualFont2">Throw Overs</div><br />
+<img src="style/sports2/crochet_top.png" align="left" width="240" height="300" alt="yogapants">
+<div class="casualDescripBox" >
+	<input onClick="throwOversChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Something Borrowed Crochet Panel Top <br />
+    <input onClick="throwOversChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> White Crochet Front Crop Tee <br />
+    <input onClick="throwOversChangeTxt(3)" type="radio" name="botRadio" id="botRadio" value="bot3" /> Swim Loose Tee <br />
+
+    <p id="throwOversContent">
+    	Featuring is a crochet blouse that is loose fitted, slightly sheer and comes with an open back design. 
+        <br/><br/>Price: SGD$24.90
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartBot()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for shoes-->
+<div class="casualFont2">Foot Wear</div><br />
+<img src="style/sports2/flipflop.png" align="left" width="265" height="235" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> Ripples Anchor Flip Flop Wedges <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> Ripples Raindrop Flip Flops <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Melissa Harmonic Glitter Bow Flip Flops <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> Rubi Cleo Sandals <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Melissa Harmonic + Jason Wu II Flip Flops <br />
+    
+    <p id="shoesContent">
+Looking for a chic pair of slippers for a day at the beach? Try this!
+        <br/><br /> - Synthetic upper
+        <br /> - EVA Rubber insole 
+        <br/><br/>Price: SGD$34.90
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartShoe()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bag-->
+<div class="casualFont2">BAG</div><br />
+<img src="style/sports2/bag.png" align="left" width="238" height="274"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> Rip Curl Reptile Festival Bag <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> Aldo Erroinbu Bag <br />  
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> Rubi The Market Carryall <br />
+    <input onClick="bagChangeTxt(4)" type="radio" name="bagRadio" id="bagRadio" value="bag4" /> Puma Fit AT Shoulder Bag <br />
+    <input onClick="bagChangeTxt(5)" type="radio" name="bagRadio" id="bagRadio" value="bag5" /> Scarf Print Tote Bag <br />
+    
+    <p id="bagContent">
+Bring your edginess to the beach with this bag.
+
+           <br /> Material: Polyurethane 
+           <br/><br/>Price: SGD$39.90
+           <br /><br />
+    </p>
+    <button type="button" onclick="addToCartBag()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Accessories-->
+<div class="casualFont2">ACCESSORIES</div><br />
+<img src="style/sports2/sunnies.png" align="left" width="260" height="230" alt="sunnies">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" /> Ray-Ban Clubmaster Classic Sunglasses <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Ray-Ban Erika Velvet Sunglasses <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> Bella Kini Crochet Raffia Hat  <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> Ray-Ban Wayfarer Flat Metal Polarized Sunglasses <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Bella Kini Straw Hat <br />
+    
+    <p id="accContent">
+     Be part of the trend and get the latest sunglasses today! 
+     <br/><br/>Price: SGD$310.00
+     <br /><br />
+    </p>
+    <button type="button" onclick="addToCartAcc()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+</div>
+
+
+
+<!--Default summary-->
+<div class="fixed" id="fixed">
+<p>SUMMARY</p>
+<hr><hr>
+<p id="chosenSwimSuit">
+ITEM:
+<br/>Funfit Racing Horses Swimsuit
+</p>
+<p id="chosenThrowOvers">Something Borrowed Crochet Panel Top</p>
+<p id="chosenShoes">Ripples Anchor Flip Flop Wedges</p>
+<p id="chosenBag">Rip Curl Reptile Festival Bag</p>
+<p id="chosenAcc">Ray-Ban Clubmaster Classic Sunglasses</p>
+<hr>
+<p id="totalPrice"> TOTAL COST: SGD$499.60 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
+<p>
+</div>
+
+<!-- Start of footer-->
+<footer>
+<br />
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
+<br>
+Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
+<br />
+</footer>
+<!-- End of footer -->
+</div>
+</div>
+</body>
+</html>

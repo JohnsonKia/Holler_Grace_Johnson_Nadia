@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fashion Invent Blocks</title>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/formal1_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
+</head>
+
+<body>
+<div id="overallWrap">
+<div class="wrapper">
+<!-- Start of header -->
+<div id="header">
+<div class="wrapper">
+<div class="logo">
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
+<center>
+<h3>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
+  <li><a href="casual.html">Casual</a></li>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
+</div>
+</div>
+</div>
+<!-- End of Header -->
+<br /><br  /><br /><br />
+<!--Casual one content to give buffer for footer -->
+<div id="formalOneContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
+<div class="formalOneWrapper">
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a onClick="toggleOverlay()"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br />  
+<div class="casualFont3">Professional Wear <br /><br /></div>
+<div class="casualFont">Customise your style:<br /></div><p>
+
+<div class="casualFont2">TOP/ DRESS</div><br />
+<img src="style/formal1/top.png" align="left" width="260" height="300" alt="top">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="topChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> Embossed Cropped Top <br />
+    <input onClick="topChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> 
+    Neckline Fit And Flare Dress <br />
+    <input onClick="topChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Lace Up Front Woven Blouse <br />
+    <input onClick="topChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Sequin Lace Pencil Dress <br />
+    <input onClick="topChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Kyle Peplum Top <br />
+    
+    <p id="topContent">
+ Featuring is a sleeveless textured surface top inspired by Jennifer Aniston. 
+ <br />It comes with a round neckline and back zip. 
+
+        <br/><br/>Price: SGD$ 27.90
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCartTop()">Add to Cart</button>
+<p>
+</div>
+
+<br /><br /><br />
+
+
+<div class="casualFont2">OUTTER WEAR</div><br />
+<img src="style/formal1/outterWear.png" align="left" width="247" height="300" alt="outterWear">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="outterWearChangeTxt(1)" type="radio" name="outterWearRadio" id="outterWearRadio" value="outterWear1" checked="true" /> Inner Circle Northern Light Jacket <br />
+    <input onClick="outterWearChangeTxt(2)" type="radio" name="outterWearRadio" id="outterWearRadio" value="outterWear2" /> 
+    Round Neck Cardigan <br />
+    
+    <p id="outterWearContent">
+        Featuring is a classy tweed finish jacket by Inner Circle. 
+        <br />Made of polyblend and comes with a round neckline.
+
+        <br/><br/>Price: SGD$53.90
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCartOutter()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for Bottom-->
+<div class="casualFont2">BOTTOM</div><br />
+<img src="style/formal1/bottom.png" align="left" width="250" height="300" alt="bottoms">
+<div class="casualDescripBox" >
+	<input onClick="botChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Textured Pencil Skirt <br />
+    <input onClick="botChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> Printed Pencil Skirt <br />
+    <input onClick="botChangeTxt(3)" type="radio" name="botRadio" id="botRadio" value="bot3" /> Rib Midi Pencil Skirt <br />
+    
+    <p id="botContent">
+    
+    Think you need a twist to your pair of black skirt? 
+    <br />Try this high waisted textured black pencil skirt featuring a bold buckle belt and a slit down the front.
+    	<br />Rock this tights with any T-shirt/ hoodie and you are ready to hit the gym. 
+
+        <br/><br/>Price: SGD$23.90
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCartBot()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for shoes-->
+<div class="casualFont2">SHOES</div><br />
+<img src="style/formal1/shoes.png" align="left" width="260" height="229" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> Esstella Pointy Heels <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> Mid Heel Pumps <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Pointed Heel Pump <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> Melody Peeptoe Platform Heels <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Crayon Print Pointed Toe Heels <br />
+    
+    <p id="shoesContent">
+    	Think you need a pair of basic heels?
+        <br />Try this!
+        <br /><br /> Available size: UK 2- 7
+
+        <br/><br/>Price: SGD$29.90
+        <br /><br />
+    </p>
+        <button type="button" onclick="addToCartShoe()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bag-->
+<div class="casualFont2">BAG</div><br />
+<img src="style/formal1/bag.png" align="left" width="238" height="274"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> Black Metal Bar Twist Lock Clutch <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> Snakeskin Metal Corner Long Clutch <br />  
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> Pebbled Tote Bag <br />
+    <input onClick="bagChangeTxt(4)" type="radio" name="bagRadio" id="bagRadio" value="bag4" /> Patent Leather Sling Bag <br />
+    
+    <p id="bagContent">
+    Add a twist to your outfit today with a black metal bar twist lock clutch. 
+    <br />It features a gold tone hardware and a top flap twist-lock closure.
+        <br/><br/>Price: SGD$20.90
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartBag()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Accessories-->
+<div class="casualFont2">ACCESSORIES</div><br />
+<img src="style/formal1/accessories.png" align="left" width="242" height="295" alt="accessories">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" /> Daniel Wellington Classic York Lady Rose Gold <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Statement Pearl Ring <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> D-Frame Sunglasses <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> Fossil Chelsey ES3720 Watch <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Twist Bangle <br />
+    <input onClick="accChangeTxt(6)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Brown Tortoise Shell Aviator Sunglasses <br />
+    
+    <p id="accContent">
+    	Featuring is a classic dark brown crocodile leather  strap watch from DW. 
+<br /> Size (Diameter): 36mm
+<br />Casing Height: 6mm
+
+        <br/><br/>
+        Price: SGD$269.00
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartAcc()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+</div>
+
+<!--Default summary-->
+<div class="fixed" id="fixed">
+<p>SUMMARY</p>
+<hr><hr>
+<p id="chosenTop">
+ITEM:
+<br/>Embossed Cropped Top
+</p>
+
+<p id="chosenOutterWear">Inner Circle Northern Light Jacket</p>
+<p id="chosenBot">Textured Pencil Skirt</p>
+<p id="chosenShoes">Esstella Pointy Heels</p>
+<p id="chosenBag">Black Metal Bar Twist Lock Clutch</p>
+<p id="chosenAcc">Daniel Wellington Classic York Lady Rose Gold</p>
+<hr>
+<p id="totalPrice"> TOTAL COST: SGD$425.50 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
+<p>
+</div>
+
+<!-- Start of footer-->
+<footer>
+<br />
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
+<br>
+Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
+<br />
+</footer>
+<!-- End of footer -->
+</div>
+</div>
+</body>
+</html>
