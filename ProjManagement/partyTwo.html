@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fashion Invent Blocks</title>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/party2_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
+</head>
+
+<body>
+<div id="overallWrap">
+<div class="wrapper">
+<!-- Start of header -->
+<div id="header">
+<div class="wrapper">
+<div class="logo">
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
+<center>
+<h3>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
+  <li><a href="casual.html">Casual</a></li>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
+</div>
+</div>
+</div>
+<!-- End of Header -->
+<br /><br  /><br /><br />
+<!--Casual one content to give buffer for footer -->
+<div id="itemContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
+<div class="itemWrapper">
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a href="cart.html"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br />  
+<div class="casualFont3">Prom Wear <br /><br /></div>
+<div class="casualFont">Customise your style:<br /></div><p>
+
+<div class="casualFont2">TOP/ DRESS</div><br />
+<img src="style/party2/top.png" align="left" width="260" height="300" alt="top">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="topChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> CPS Black Bardot Crop Top <br />
+    <input onClick="topChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> 
+    Red Checkered Sequin Shift Dress <br />
+    <input onClick="topChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Cut In Buckle Top <br />
+    <input onClick="topChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Colourblock Ruffle Hem Dress <br />
+    <input onClick="topChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Alley Geometric Print Dress<br />
+    
+    <p id="topContent">
+       Looking for a versatile piece to wear even after prom? <br />Look no further. <br />This is definitely something you should not miss!<br /><br />Price: SGD$49.90
+
+      </p>
+    <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+
+<br /><br /><br />
+
+
+<div class="casualFont2">OUTTER WEAR</div><br />
+<img src="style/party2/blazer.png" align="left" width="247" height="300" alt="outterWear">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="outterWearChangeTxt(1)" type="radio" name="outterWearRadio" id="outterWearRadio" value="outterWear1" checked="true" /> Zalora Collarless Blazer <br />
+    <input onClick="outterWearChangeTxt(2)" type="radio" name="outterWearRadio" id="outterWearRadio" value="outterWear2" /> 
+    Collarless Tweed Biker Jacket <br />
+    
+    <p id="outterWearContent">
+        Set a statement for yourself with our all new orange collarless blazer from Zalora. <br /><br />Price: SGD$44.90
+
+
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for Bottom-->
+<div class="casualFont2">BOTTOM</div><br />
+<img src="style/party2/bottoms.png" align="left" width="233" height="309" alt="bottoms">
+<div class="casualDescripBox" >
+	<input onClick="botChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Zalia Mermaid Maxi Skirt <br />
+    <input onClick="botChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> Alcott Amanda Jersey Skirt <br />
+    
+    <p id="botContent">
+Featuring is a glamourous skirt by Zalia that comes with a partially elasticated waistband. <br />The perfect figure-hugging silhouette for prom.<br /><br />Price: SGD$64.90
+
+    </p>
+    <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for shoes-->
+<div class="casualFont2">SHOES</div><br />
+<img src="style/party2/shoes.png" align="left" width="260" height="229" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> Pauline Pointy D'Orsay Heels <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> Sleek Pumps <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Metallic Triangle Printed Super Platform Heels <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> SHANNON Metallic Dress Pumps <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Patchuli IX Wedges <br />
+    
+    <p id="shoesContent">
+     The perfect classic black footwear for any occasion. <br /><br />Price: SGD$39.90
+
+        <br /><br />
+    </p>
+        <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bag-->
+<div class="casualFont2">BAG</div><br />
+<img src="style/party2/bag.png" align="left" width="238" height="224"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> Oversized Quilt Zip Top Clutch <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> Patent Boxy Minaudiere <br />  
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> River Island Chain Detail Strappy Clutch <br />
+    
+    <p id="bagContent">
+       Jazz up your outfit with the all new oversized quilt clutch from New Look.<br /><br />-Synthetic<br /><br />Price: SGD$39.90
+
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Accessories-->
+<div class="casualFont2">ACCESSORIES</div><br />
+<img src="style/party2/accessories.png" align="left" width="242" height="295" alt="accessories">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" />Gem Bib Necklace <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Shirred Bridal Gloves <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> Multi Charms Bracelet <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> Square And Pearl Long Necklace <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Metal Cuff <br />
+    <input onClick="accChangeTxt(6)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Multi Gemstones Ring Set <br />
+    <input onClick="accChangeTxt(7)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Chomel Crystal Pendant Necklace <br />
+    <p id="accContent">
+Featuring is a necklace from something borrowed.  <br /> -	Metal alloy<br />-	Lobster clasp closure<br /><br />Price: SGD$19.90
+
+    </p>
+    <button type="button" onclick="addToCart()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+</div>
+
+<!--Default summary-->
+<div class="fixed" id="fixed">
+<p>SUMMARY</p>
+<hr><hr>
+<p id="chosenTop">
+ITEM:
+<br/>Boyfriend Tee
+</p>
+
+<p id="chosenOutterWear">Mango Suit Blazer </p>
+<p id="chosenBot">Skinny Paty Jeans</p>
+<p id="chosenShoes">Buckled Ankle Boots</p>
+<p id="chosenBag">Soft Bowler Bag</p>
+<p id="chosenAcc">Multi Chain Layered Necklace</p>
+<hr>
+<p id="totalPrice"> TOTAL COST: SGD$259.40 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
+<p>
+</div>
+
+<!-- Start of footer-->
+<footer>
+<br />
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
+<br>
+Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
+<br />
+</footer>
+<!-- End of footer -->
+</div>
+</div>
+</body>
+</html>

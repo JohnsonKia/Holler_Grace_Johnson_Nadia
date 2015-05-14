@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Fashion Invent Blocks</title>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/sports1_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
+</head>
+
+<body>
+<div id="overallWrap">
+<div class="wrapper">
+<!-- Start of header -->
+<div id="header">
+<div class="wrapper">
+<div class="logo">
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
+<center>
+<h3>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
+  <li><a href="casual.html">Casual</a></li>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
+</div>
+</div>
+</div>
+<!-- End of Header -->
+<br /><br  /><br /><br />
+<!--Casual one content to give buffer for footer -->
+<div id="itemContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
+<div class="itemWrapper">
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a onClick="toggleOverlay()"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br />  
+<div class="casualFont3">Gym Wear <br /><br /></div>
+<div class="casualFont">Customise your style:<br /></div><p>
+
+<div class="casualFont2">TOP</div><br />
+<img src="style/sports1/top.png" align="left" width="260" height="300" alt="hoodie">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="topChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> Mountain Clash Hoodie <br />
+    <input onClick="topChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> 
+    Factorie
+Sachi Tank <br />
+    <input onClick="topChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Funfit
+Active Tank Top <br />
+    <input onClick="topChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Funfit
+Basic Racerback Sports Bra <br />
+    <input onClick="topChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Women's Tennis Barricade Polo Shirt <br />
+    
+    <p id="topContent">
+        Hit the gym by dressing like Vanessa Hudgens in this scenic mountain hoodie.
+        <br />Comes with side seam pockets and an adjustable drawcord hoodie.
+        <br/><br/>- 85% Polyester
+        <br />- 15% French Terry
+        <br/><br/>Price: SGD$109.00
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCartTop()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bottom-->
+<div class="casualFont2">BOTTOM</div><br />
+<img src="style/sports1/bottom.png" align="left" width="250" height="300" alt="yogapants">
+<div class="casualDescripBox" >
+	<input onClick="botChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Ultimate Fit Tights <br />
+    <input onClick="botChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> Women's Leggings <br />
+    <input onClick="botChangeTxt(3)" type="radio" name="botRadio" id="botRadio" value="bot3" /> Funfit Shorts With Reflective Brand Logo <br />
+    <input onClick="botChangeTxt(4)" type="radio" name="botRadio" id="botRadio" value="bot4" /> Slouchy Pants <br />
+    <input onClick="botChangeTxt(5)" type="radio" name="botRadio" id="botRadio" value="bot5" /> Workout Pants <br />
+    
+    <p id="botContent">
+    	Rock this tights with any T-shirt/ hoodie and you are ready to hit the gym. 
+        <br /> These women's climate helps to cut sweat out of your training.
+        <br/><br/>Price: SGD$69.00
+        <br /><br />
+
+    </p>
+    <button type="button" onclick="addToCartBot()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br /><br /><br />
+
+
+<!-- Radio Button implemented for switch of description for shoes-->
+<div class="casualFont2">SHOES</div><br />
+<img src="style/sports1/shoes.png" align="left" width="260" height="229" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> Superstar Up Shoes <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> ADIZERO BOSTON 5 W <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Duramo Slide <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> Birkenstock Arizona Collection Sandals <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Barricade V Classic W <br />
+    
+    <p id="shoesContent">
+    	When you hit the gym, it is advisable to get a good pair of shoes to ensure comfort throughout exercises. 
+        <br/> - Full grain leather upper
+        <br /> - Synthetic leather 
+        <br /> - 4 cm inner wedge
+        <br/><br/>Price: SGD$139.00
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartShoe()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Bag-->
+<div class="casualFont2">BAG</div><br />
+<img src="style/sports1/bag.png" align="left" width="238" height="274"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> Beachshopper Bag <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> Superstar Gym Sack <br />  
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> My Favourite Tote <br />
+    <input onClick="bagChangeTxt(4)" type="radio" name="bagRadio" id="bagRadio" value="bag4" /> Mountain Sack Backpack <br />
+    <input onClick="bagChangeTxt(5)" type="radio" name="bagRadio" id="bagRadio" value="bag5" /> You Tote <br />
+    
+    <p id="bagContent">
+    	Looking for a bag to store your gym clothes etc?
+        Try this!!
+        <br /> Features a zip and an inner side pocket
+        <br/><br/>Price: SGD$59.00
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartBag()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+
+<!-- Radio Button implemented for switch of description for Accessories-->
+<div class="casualFont2">ACCESSORIES</div><br />
+<img src="style/sports1/headphone.jpg" align="left" width="242" height="295" alt="headphones">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" /> Studio Wireless Headset by Dre.Beats <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Women's Poly Bottle <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> Lapalette
+Didi Stripe Snapback <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> Ray-Ban Wayfarer Liteforce Polarized Sunglasses <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Calgary Watch <br />
+    
+    <p id="accContent">
+    	Be part of the trend and gym with a wireless headset.
+        <br/><br/>Price: SGD$590.00
+        <br /><br />
+    </p>
+    <button type="button" onclick="addToCartAcc()">Add to Cart</button>
+<p>
+</div>
+<br /><br /><br />
+</div>
+
+<!--Default summary-->
+<div class="fixed" id="fixed">
+<p>SUMMARY</p>
+<hr><hr>
+<p id="chosenTop">
+ITEM:
+<br/>Mountain Clash Hoodie 
+</p>
+<p id="chosenBot">Ultimate Fit Tights</p>
+<p id="chosenShoes">Superstar Up Shoes</p>
+<p id="chosenBag">Beachshopper Bag</p>
+<p id="chosenAcc">Studio Wireless Headset by Dr.Beats</p>
+<hr>
+<p id="totalPrice"> TOTAL COST: SGD$966.00 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
+<p>
+</div>
+
+<!-- Start of footer-->
+<footer>
+<br />
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
+<br>
+Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
+<br />
+</footer>
+<!-- End of footer -->
+</div>
+</div>
+</body>
+</html>

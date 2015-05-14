@@ -2,78 +2,206 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Fashion Invent Blocks</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/casual1_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
+
 </head>
 
 <body>
 <div id="overallWrap">
 <div class="wrapper">
+<!-- Start of header -->
 <div id="header">
 <div class="wrapper">
 <div class="logo">
-<h1><a name="topNav" href="index.html"><img src="Others/logo web copy.png" width="170" height="50" alt="Logo"></a></h1>
-</div>
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
 <center>
 <h3>
-<ul><li><a name="" href="#">Party</a></li>
-  <li><a href="#">Sports</a></li>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
   <li><a href="casual.html">Casual</a></li>
-  <li><a href="#">Formal</a></li>
-  <li><a href="store.html">Store</a></li>
-</ul></h3></center>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
 </div>
 </div>
 </div>
+<!-- End of Header -->
 <br /><br  /><br /><br />
+<!--Casual one content to give buffer for footer -->
 <div id="casualOneContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
 <div class="casualOneWrapper">
-<br /> <br />
-<img src="Others/instructions.png" width="1000" style="border:5px solid black" height="150" alt="steps">
-<br /> <br />
-<div class="casualFont">Customise your style:</div><p>
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a onClick="toggleOverlay()"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br />
+<div class="casualFont3">Edgy Casual <br /><br /></div>
+<div class="casualFont">Customise your style:<br /></div><p>
 
 <div class="casualFont2">TOP</div><br />
-<img src="Others/CatTee.png" align="left" width="234" height="312" alt="CatTee">
-<div class="casualDescripBox">Description</div>
+<img src="style/CatTee.png" align="left" width="234" height="312" alt="CatTee">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="topChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> Catnel Crop Top <br />
+    <input onClick="topChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> Black Babydoll Blouse <br />
+    <input onClick="topChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Polka Dot Denim <br />
+    <input onClick="topChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Black Wrap Crop Top <br />
+    <input onClick="topChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Bar Code Pattern (Black and White) <br />
+    
+    <p id="topContent">
+        Thinking of dressing like Kendall Jenner, this is definitely the top for you! It features a cute little feline with the word Catnel imprinted on it.
+        <br/><br/>Price: SGD$29.90
+        <br/><br/>Size UK 34-46 available
+        <br/>*Check size Chart
+    </p>
+    <button type="button" onclick="addToCartTop()">Add to Cart</button>
+</div>
 <br /><br /><br />
 
-
+<!-- Radio Button implemented for switch of description for Bottom-->
 <div class="casualFont2">BOTTOM</div><br />
-<img src="Others/JeansK.png" align="left" width="250" height="383" alt="Jeans"><div class="casualDescripBox">Description</div>
+<img src="style/JeansK.png" align="left" width="250" height="383" alt="Jeans">
+<div class="casualDescripBox" >
+	<input onClick="botChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Indigo ‘Lyla’ High Waist Tube Pants <br />
+    <input onClick="botChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> Flare Skirt <br />
+    <input onClick="botChangeTxt(3)" type="radio" name="botRadio" id="botRadio" value="bot3" /> Blue Bleach Shorts Dorothy Perkins <br />
+    <input onClick="botChangeTxt(4)" type="radio" name="botRadio" id="botRadio" value="bot4" /> Jeggings <br />
+    <input onClick="botChangeTxt(5)" type="radio" name="botRadio" id="botRadio" value="bot5" /> Double Pocket Neoprene Skirt <br />
+    
+    <p id="botContent">
+    	To rock this, simply pair this with a tee shirt and you are ready to go. It features a side zip and gold threads. It has an elastic waistband.
+        <br/><br/>Price: SGD$48.40
+        <br/><br/>Size Uk 6- 16 Available
+        <br/>*Check size Chart
+    </p>
+    <button type="button" onclick="addToCartBot()">Add to Cart</button>
+</div>
 <br /><br /><br /><br /><br />
 
+
+<!-- Radio Button implemented for switch of description for shoes-->
 <div class="casualFont2">SHOES</div><br />
-<img src="Others/ShoesK.png" align="left" width="243" height="229" alt="shoes"> 
-<div class="casualDescripBox">Description </div>
+<img src="style/ShoesK.png" align="left" width="243" height="229" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> PU Leather Wedge Sneakers With Straps <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> Nine West Black Cozelle Platform Heels <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Studded Strap Sandals <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> Adalyn Mid High Zip-Up Boots <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Detailed Chain Suede Ankle booties <br />
+    
+    <p id="shoesContent">
+    	Featuring is a wedge sneakers straps. This is definitely the pair of shoe for everday wear. It’s surface comes with a padded topline for extra comfort.
+        <br/> -Synthetic upper leather
+        <br/>-Fastening stap: Velcro
+        <br/><br/>Price: SGD$44.90
+        <br/><br/>Sizes available: US 5- 10
+    </p>
+    <button type="button" onclick="addToCartShoe()">Add to Cart</button>
+</div>
 <br /><br /><br />
 
+<!-- Radio Button implemented for switch of description for Bag-->
 <div class="casualFont2">BAG</div><br />
-<img src="Others/BagK.png" align="left" width="238" height="274"alt="bag">
-<div class="casualDescripBox">Description </div>
+<img src="style/BagK.png" align="left" width="238" height="274"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> MANGO Small Tote Bag <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> Black Quilted Cross Body Bag <br />
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> River Island Brown Snake Mini Zip Around Purse <br />
+    <input onClick="bagChangeTxt(4)" type="radio" name="bagRadio" id="bagRadio" value="bag4" /> Jane Shilton Groove Medium Tote(RED) <br />
+    <input onClick="bagChangeTxt(5)" type="radio" name="bagRadio" id="bagRadio" value="bag5" /> RUBI Mini Bucket Bag <br />
+    
+    <p id="bagContent">
+    	Looking for something reasonable yet edgy? This is the bag for you! Featuring Mango small tote bag with a zipper and a strap. Bag is ready for expansion anytime.
+        <br/><br/> -PVC Leather
+        <br/>-Magnetic tab for closure
+        <br/><br/>Price: SGD$59.00
+    </p>
+    <button type="button" onclick="addToCartBag()">Add to Cart</button>
+</div>
 <br /><br /><br />
 
-<div class="casualFont2">ACCESORIES</div><br />
-<img src="Others/SunniesK.png" align="left" width="242" height="295" alt="SUNNIES">
-<div class="casualDescripBox">Description</div>
+<!-- Radio Button implemented for switch of description for Accessories-->
+<div class="casualFont2">ACCESSORIES</div><br />
+<img src="style/SunniesK.png" align="left" width="242" height="295" alt="SUNNIES">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" /> Kaille Sunglasses ALDO <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Handstitched Beaded Alligator Clip <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> Wool Felt Round Floopy Hat <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> RUBI LC Sunnies <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> CLYDE Necklace <br />
+    
+    <p id="accContent">
+    	Shield the sun and dress just like Kendall Jenner!!
+        <br/><br/>Price: SGD$35.00
+    </p>
+    <button type="button" onclick="addToCartAcc()">Add to Cart</button>
+</div>
 <br /><br /><br />
 </div>
 
-<div class="fixed">
-<p> SUMMARY</p>
+<!--Default summary-->
+<div class="fixed" id="fixed">
+<p>SUMMARY</p>
 <hr><hr>
-<p>ITEMS: </p>
+<p id="chosenTop">
+ITEM:
+<br/>Catnel Crop Top
+</p>
+<p id="chosenBot">High Waist Tube Pants</p>
+<p id="chosenShoes">PU Leather Wedge Sneakers</p>
+<p id="chosenBag">MANGO Small Tote Bag</p>
+<p id="chosenAcc">Kaille Sunglasses ALDO</p>
 <hr>
-<p> TOTAL COST: SGD$ </p>
-<button type="button"> ADD TO CART </button>
+<p id="totalPrice"> TOTAL COST: SGD$217.20 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
 </div>
 
+<!-- Start of footer-->
 <footer>
 <br />
-Shop the <a href="#">fashion Invent Blocks</a> online store.
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
 <br>
 Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
 <br />
 </footer>
+<!-- End of footer -->
+</div>
 </div>
 </body>
 </html>

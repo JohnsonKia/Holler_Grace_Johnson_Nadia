@@ -2,78 +2,207 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Fashion Invent Blocks</title>
-<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="style/style.css"/>
+<script type="text/javascript" src="storescripts/casual2_product_content.js"></script>
+<script type="text/javascript" src="storescripts/cartpage.js"></script>
 </head>
-
 <body>
 <div id="overallWrap">
 <div class="wrapper">
+<!-- start of header-->
 <div id="header">
 <div class="wrapper">
 <div class="logo">
-<h1><a name="topNav" href="index.html"><img src="Others/logo web copy.png" width="170" height="50" alt="Logo"></a></h1>
-</div>
+<h1><a name="topNav" href="index.html"><img src="style/logo web copy.png" width="170" height="50" alt="Logo"></a></h1></div>
 <center>
 <h3>
-<ul><li><a name="" href="#">Party</a></li>
-  <li><a href="#">Sports</a></li>
+<ul>
+  <li><a href="party.html">Party</a></li>
+  <li><a href="sports.html">Sports</a></li>
   <li><a href="casual.html">Casual</a></li>
-  <li><a href="#">Formal</a></li>
-  <li><a href="store.html">Store</a></li>
-</ul></h3></center>
+  <li><a href="formal.html">Formal</a></li>
+  <li><a href="store_page.html">Store</a></li>
+</ul>
+</h3>
+</center>
 </div>
 </div>
 </div>
+<!-- End of header-->
 <br /><br  /><br /><br />
-<div id="casualOneContent">
+<!--Casual two content to give buffer for footer -->
+<div id="casualTwoContent">
+<br /><br />
+<!--Wrapper to align the contents in the middle -->
 <div class="casualOneWrapper">
-<br /> <br />
-<img src="Others/instructions.png" width="1000" style="border:5px solid black" height="150" alt="steps">
-<br /> <br />
+
+<!-- Start Overlay -->
+<div id="overlay"></div>
+<!-- End Overlay -->
+<!-- Start Special Centered Box -->
+<div id="specialBox">
+	<p id="cartItem"></p>
+  	<table width="100%" border="0" cellpadding="5" cellspacing="0">
+      <tr bgcolor="#CCCCCC">
+        <td width="400"><strong>Item</strong></td>
+        <td width="90"><strong>Unit Price</strong></td>
+        <td width="90"><strong>Quantity</strong></td>
+        <td width="80"><strong>Total</strong></td>
+        <td width="70"><strong>Remove</strong></td>
+      </tr>
+       <tr >
+        <td width="400" id="itemName"></td>
+        <td width="90" id="itemPrices"></td>
+        <td width="90" id="quantity"></td>
+        <td width="80" id="itemTotalPrice"></td>
+        <td width="70" id="remove" align="center"></td>
+      </tr>
+	</table>
+    <p id="totalValue" align="right" style="padding-right:20px"></p>
+    <button onmousedown="emptyCart()">Empty The Cart</button>
+    <p align="right" style="padding-right:20px"><button type="button" onclick="location.href='coming_soon.html' ">Check Out</button></p>
+    <p align="center"><button onmousedown="toggleOverlay()">Close View</button></p>
+</div>
+<!-- End Special Centered Box -->
+
+<div id="header2">
+<a onClick="toggleOverlay()"><img src="style/cart2.png" width="120" height= "25" alt="cart"></a>
+</div>
+<br /><br /> 
+<div class="casualFont3">Comfy Casual <br /><br /></div>
 <div class="casualFont">Customise your style:</div><p>
 
 <div class="casualFont2">TOP</div><br />
-<img src="Others/top2.jpg" align="left" width="234" height="312" alt="CatTee">
-<div class="casualDescripBox">Description</div>
+<img src="style/Top2.jpg" align="left" width="234" height="312" alt="SleevelessTop">
+<div class="casualDescripBox" >
+<!-- Radio Button implemented for switch of description for top-->
+	<input onClick="topChangeTxt(1)" type="radio" name="topRadio" id="topRadio" value="top1" checked="true" /> Cuteway Crinkle Tank <br />
+    <input onClick="topChangeTxt(2)" type="radio" name="topRadio" id="topRadio" value="top2" /> Split Back Sequin Tee <br />
+    <input onClick="topChangeTxt(3)" type="radio" name="topRadio" id="topRadio" value="top3" /> Petite Exclusive Jacquard Sweat <br />
+    <input onClick="topChangeTxt(4)" type="radio" name="topRadio" id="topRadio" value="top4" /> Cut-Away Crinkle Tank Top <br />
+    <input onClick="topChangeTxt(5)" type="radio" name="topRadio" id="topRadio" value="top5" /> Scoop Back Stretch Jersey Tee <br />
+    
+    <p id="topContent">
+        Looking for a basic tank to style just like Ariana Grande or Kylie Jenner? Try this! Sleeveless Tank Top.
+        <br/><br/>-Polyester
+        <br/>-2% Elastane
+        <br/><br/>Price: SGD$29.00
+    </p>
+    <button type="button" onclick="addToCartTop()">Add to Cart</button>
+</div>
 <br /><br /><br />
 
-
+<!-- Radio Button implemented for switch of description for bottom-->
 <div class="casualFont2">BOTTOM</div><br />
-<img src="Others/Bottom2.jpg" align="left" width="250" height="383" alt="Jeans"><div class="casualDescripBox">Description</div>
+<img src="style/Bottom2.jpg" align="left" width="250" height="383" alt="Jeans">
+<div class="casualDescripBox" >
+	<input onClick="botChangeTxt(1)" type="radio" name="botRadio" id="botRadio" value="bot1" checked="true" /> Moto Pretty Blue Joni Jeans <br />
+    <input onClick="botChangeTxt(2)" type="radio" name="botRadio" id="botRadio" value="bot2" /> Moto Indigo Rinse Mom Shorts <br />
+    <input onClick="botChangeTxt(3)" type="radio" name="botRadio" id="botRadio" value="bot3" /> Moto Black Joni Jeans <br />
+    <input onClick="botChangeTxt(4)" type="radio" name="botRadio" id="botRadio" value="bot4" /> Moto Black Denim Ripped Hotpants <br />
+    <input onClick="botChangeTxt(5)" type="radio" name="botRadio" id="botRadio" value="bot5" /> MANGO Skinny Newpaty Jeans <br />
+    
+    <p id="botContent">
+    	High Rise Jeans with 2 back pockets and class trims.
+        <br/><br/> -70% Cotton
+        <br/> -26% Polyester
+        <br/> -4% Elastane
+        <br/><br/>Price: SGD$79.00
+
+    </p>
+    <button type="button" onclick="addToCartBot()">Add to Cart</button>
+<p>
+</div>
 <br /><br /><br /><br /><br />
 
+<!-- Radio Button implemented for switch of description for shoes-->
 <div class="casualFont2">SHOES</div><br />
-<img src="Others/Shoe2.jpg" align="left" width="243" height="229" alt="shoes"> 
-<div class="casualDescripBox">Description </div>
+<img src="style/Shoe2.jpg" align="left" width="243" height="229" alt="shoes"> 
+<div class="casualDescripBox" >
+	<input onClick="shoesChangeTxt(1)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes1" checked="true" /> Slip-On Sneakers <br />
+    <input onClick="shoesChangeTxt(2)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes2" /> Double Buckle Calf Boots <br />
+    <input onClick="shoesChangeTxt(3)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes3" /> Aubery Silver Trim Ankle Boots <br />
+    <input onClick="shoesChangeTxt(4)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes4" /> Bunk Hiker Boots <br />
+    <input onClick="shoesChangeTxt(5)" type="radio" name="shoesRadio" id="shoesRadio" value="shoes5" /> Toni Mid-Calf Chunky Heel Boots <br />
+    
+    <p id="shoesContent">
+    	Think of skipping the heels and not wanting to look like a fashion disaster? Try this! Comes with a round toe front and quilted sides.
+        <br/><br/>Price: SGD$53.90
+
+    </p>
+    <button type="button" onclick="addToCartShoe()">Add to Cart</button>
+<p>
+</div>
 <br /><br /><br />
 
+<!-- Radio Button implemented for switch of description for bag-->
 <div class="casualFont2">BAG</div><br />
-<img src="Others/Bag2.jpg" align="left" width="238" height="274"alt="bag">
-<div class="casualDescripBox">Description </div>
+<img src="style/bag2.jpg" align="left" width="238" height="274"alt="bag">
+<div class="casualDescripBox" >
+	<input onClick="bagChangeTxt(1)" type="radio" name="bagRadio" id="bagRadio" value="bag1" checked="true" /> Casual Shoulder Bag <br />
+    <input onClick="bagChangeTxt(2)" type="radio" name="bagRadio" id="bagRadio" value="bag2" /> PU Backpack <br />
+    <input onClick="bagChangeTxt(3)" type="radio" name="bagRadio" id="bagRadio" value="bag3" /> Smart Crossbody Bag <br />
+    <input onClick="bagChangeTxt(4)" type="radio" name="bagRadio" id="bagRadio" value="bag4" /> Work Handbag <br />
+    <input onClick="bagChangeTxt(5)" type="radio" name="bagRadio" id="bagRadio" value="bag5" /> River Island Black Textured Mini Satchel <br />
+    
+    <p id="bagContent">
+    	Looking for a bag that is inspired by Taylor swift? Look no further! This might just be the perfect bag for you! Mid-sized  shoulder bag with double chain straps.
+        <br/><br/> Label: CHARLES & KEITH
+        <br/><br/>Price: SGD$79.90
+    </p>
+    <button type="button" onclick="addToCartBag()">Add to Cart</button>
+<p>
+</div>
 <br /><br /><br />
 
+<!-- Radio Button implemented for switch of description for accessories-->
 <div class="casualFont2">ACCESORIES</div><br />
-<img src="Others/Hat2.jpg" align="left" width="242" height="295" alt="SUNNIES">
-<div class="casualDescripBox">Description</div>
+<img src="style/Hat2.jpg" align="left" width="242" height="295" alt="FloppyHat">
+<div class="casualDescripBox" >
+	<input onClick="accChangeTxt(1)" type="radio" name="accRadio" id="accRadio" value="acc1" checked="true" /> Chain Trim Floppy Hat <br />
+    <input onClick="accChangeTxt(2)" type="radio" name="accRadio" id="accRadio" value="acc2" /> Felt Floppy Hat <br />
+    <input onClick="accChangeTxt(3)" type="radio" name="accRadio" id="accRadio" value="acc3" /> New Big Felt Floppy Hat <br />
+    <input onClick="accChangeTxt(4)" type="radio" name="accRadio" id="accRadio" value="acc4" /> Pork Pie Hat <br />
+    <input onClick="accChangeTxt(5)" type="radio" name="accRadio" id="accRadio" value="acc5" /> Mini Bowler Hat <br />
+    
+    <p id="accContent">
+    	Looking for something to spice up a basic outfit? Try this classic chain trim floppy hat.
+        <br/><br/> -100% Wool
+        <br/><br/>Price: SGD$76.00
+    </p>
+    <button type="button" onclick="addToCartAcc()">Add to Cart</button>
+<p>
+</div>
 <br /><br /><br />
 </div>
 
-<div class="fixed">
+<!--Default summary-->
+<div class="fixed" id="fixed">
 <p> SUMMARY</p>
 <hr><hr>
-<p>ITEMS: </p>
+<p id="chosenTop">
+ITEM:
+<br/>Cuteway Crinkle Tank
+</p>
+<p id="chosenBot">Moto Pretty Blue Joni Jeans</p>
+<p id="chosenShoes">Slip-On Sneakers</p>
+<p id="chosenBag">Casual Shoulder Bag</p>
+<p id="chosenAcc">Chain Trim Floppy Hat</p>
 <hr>
-<p> TOTAL COST: SGD$ </p>
-<button type="button"> ADD TO CART </button>
+<p id="totalPrice"> TOTAL COST: SGD$317.80 </p>
+<center><button type="button" onclick="toggleOverlay()">View Cart</button></center>
 </div>
 
+<!-- start of footer-->
 <footer>
 <br />
-Shop the <a href="#">fashion Invent Blocks</a> online store.
+Shop the <a href="index.html">fashion Invent Blocks</a> online store.
 <br>
 Copyright © 2014 Invent Blocks Pte Ltd. All rights reserved.</br>
 <br />
 </footer>
+<!-- End of footer-->
+</div>
 </div>
 </body>
 </html>
